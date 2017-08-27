@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour {
 	public BulletType bulletType = BulletType.DefaultFire;
 	public bool AmmoReset = false;
 	public bool Froze;
+	public bool has2ndLife = false;
 
 	private PowerupMaster powerupMaster;
 
@@ -108,7 +109,10 @@ public class PlayerController : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Ball")
         {
-           FindObjectOfType<GameOverMenu>().EndGame();
+			if(!has2ndLife)
+				FindObjectOfType<GameOverMenu>().EndGame();
+			else
+				has2ndLife = false;
         }
     }
 

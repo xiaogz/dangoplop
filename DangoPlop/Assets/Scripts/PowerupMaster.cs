@@ -109,6 +109,7 @@ public class PowerupMaster : MonoBehaviour {
 			break;
 		case PowerupType.Life:
 			renderComponent.sprite = powerupLife;
+			give2ndLife();
 			break;
 		case PowerupType.Random:
 			renderComponent.sprite = powerupRandom;
@@ -222,6 +223,11 @@ public class PowerupMaster : MonoBehaviour {
 
 	private void setRapidFire(){
 		playerController.rapidFire ();
+	}
+
+	private void give2ndLife()
+	{
+		playerController.has2ndLife = true;
 	}
 
 	// MAKE YOUR POWERUP FUNCTIONS HERE

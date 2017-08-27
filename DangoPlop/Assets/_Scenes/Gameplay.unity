@@ -890,6 +890,7 @@ MonoBehaviour:
   bulletType: 0
   AmmoReset: 0
   Froze: 0
+  has2ndLife: 0
 --- !u!50 &1112566740
 Rigidbody2D:
   serializedVersion: 4
@@ -970,7 +971,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &1112566743
 Transform:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &1197787038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,7 +1773,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!61 &1823898791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1920,7 +1918,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
 --- !u!114 &1960204568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,7 +2081,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &2048020147
 GameObject:
   m_ObjectHideFlags: 0
