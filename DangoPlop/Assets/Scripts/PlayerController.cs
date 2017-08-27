@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour {
 	public bool AmmoReset = false;
 	public bool Froze;
 	public bool has2ndLife = false;
+	private GameObject shield;
 
 	private PowerupMaster powerupMaster;
 
@@ -51,6 +52,8 @@ public class PlayerController : MonoBehaviour {
 		originalScale = gameObject.transform.lossyScale;
 		originalHeight = gameObject.transform.position.y;
 		powerupMaster = GameObject.FindGameObjectWithTag ("PowerupPanel").GetComponent<PowerupMaster> ();
+		shield = GameObject.FindGameObjectWithTag("Shield");
+		deactivateShield();
     }
 	void FixedUpdate() {
 
@@ -112,6 +115,7 @@ public class PlayerController : MonoBehaviour {
 			if(!has2ndLife)
 				FindObjectOfType<GameOverMenu>().EndGame();
 			else
+				deactivateShield();
 				has2ndLife = false;
         }
     }
@@ -169,6 +173,16 @@ public class PlayerController : MonoBehaviour {
 		bulletType = BulletType.DefaultFire;
 		AmmoReset = true;
 
+	}
+
+	public void activateShield()
+	{
+		shield.SetActive( true );
+	}
+
+	public void deactivateShield()
+	{
+		shield.SetActive( false );
 	}
 	
     IEnumerator Wait()

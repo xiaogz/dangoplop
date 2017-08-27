@@ -228,6 +228,7 @@ public class PowerupMaster : MonoBehaviour {
 	private void give2ndLife()
 	{
 		playerController.has2ndLife = true;
+		playerController.activateShield();
 	}
 
 	// MAKE YOUR POWERUP FUNCTIONS HERE
